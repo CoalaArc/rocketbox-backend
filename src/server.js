@@ -34,6 +34,4 @@ app.use("/files", express.static(path.resolve(__dirname, "..", "tmp")));
 
 app.use(require("./routes"));
 
-server.listen(3000, function() {
-  console.log("Funfou !!");
-});
+server.listen(process.env.PORT || 3000);
